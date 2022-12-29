@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+    <title>Spring mvc Product list</title>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen">
+    <script src="http://ccdn.jselivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(product)}">
+        <h2>Product list</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>id</th>
+                <th>description</th>
+                <th>price</th>
+                <th>photo</th>
+            </tr>
+            <tr th:each="product:${products}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.description}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.photo}"></td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+</body>
+</html>
