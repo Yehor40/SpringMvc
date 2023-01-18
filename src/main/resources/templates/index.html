@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Spring mvc</title>
-    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html">
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Core Online Tutorial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
-    th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
-    rel="stylesheet" media="screen">
-    <script src="http://ccdn.jselivr.net/webjars/jquery/2.1.4/jquery.min.js"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
 <div class="container">
-    <h1>Hello world</h1>
-    <h2>Don't smoke</h2>
+    <h1>Hello World</h1>
+
+    <h2>Don't smoke pot fellas</h2>
+    <h3>Product list:</h3>
     <a th:href="'/products'"class="btn btn-warning">Products</a>
 </div>
 

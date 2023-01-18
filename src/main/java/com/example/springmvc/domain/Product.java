@@ -1,23 +1,13 @@
 package com.example.springmvc.domain;
 
+
 import java.math.BigDecimal;
 
-public class Product {
+public class Product{
     private Integer id;
     private String description;
     private BigDecimal price;
     private String imageUrl;
-
-    public Product(Integer id, String description, BigDecimal price, String imageUrl) {
-        this.id = id;
-        this.description = description;
-        this.price = price;
-        this.imageUrl = imageUrl;
-    }
-
-    public Product() {
-
-    }
 
     public Integer getId() {
         return id;
