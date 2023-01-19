@@ -16,26 +16,24 @@
 </head>
 <body>
 <div class="container">
-    <div th:if="${not #lists.isEmpty(products)}">
-        <h2>Product List</h2>
+
+    <h2>Product details</h2>
+
         <table class="table table-striped">
             <tr>
                 <th>Id</th>
                 <th>Description</th>
                 <th>Price</th>
                 <th>Image URL</th>
-                <th>Details</th>
             </tr>
-            <tr th:each="product : ${products}">
                 <td th:text="${product.id}"></td>
                 <td th:text="${product.description}"></td>
                 <td th:text="${product.price}"></td>
                 <td th:text="${product.imageUrl}"></td>
-                <td> <a th:href="${'/product/'+product.id}"> show</a></td>
             </tr>
         </table>
+    <a th:href="'/products'"class="btn btn-danger">Back</a>
     </div>
-</div>
 
 </body>
 </html>
