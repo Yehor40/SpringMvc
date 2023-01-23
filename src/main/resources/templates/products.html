@@ -25,6 +25,7 @@
                 <th>Price</th>
                 <th>Image URL</th>
                 <th>Details</th>
+                <td><a th:href="'/product/new'"class="btn btn-warning">Add new</a></td>
             </tr>
             <tr th:each="product : ${products}">
                 <td th:text="${product.id}"></td>
